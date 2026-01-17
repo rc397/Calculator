@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Worst Calculator Ever</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="calc" id="calc">
+      <header class="calc__header">
+        <h1 class="calc__title">Worst Calculator Ever</h1>
+        <p class="calc__subtitle">Only does addition for -100..100. Badly.</p>
+      </header>
+
+      <div class="calc__screen" aria-live="polite" aria-atomic="true">
+        <div class="calc__output" id="output">0</div>
+        <div class="calc__hint" id="hint">Type something like <code>-12 + 34</code></div>
+      </div>
+
+      <div class="calc__controls">
+        <input id="expr" class="calc__input" inputmode="text" autocomplete="off" spellcheck="false" placeholder="e.g. 1+1" />
+        <button id="btn" class="calc__btn">Calculate</button>
+      </div>
+    </section>
+
+    <section class="crash hidden" id="crash">
+      <div class="crash__box">
+        <h2>Crash</h2>
+        <pre class="crash__msg" id="crashMsg"></pre>
+        <button id="reload" class="calc__btn">Reload (coward)</button>
+      </div>
+    </section>
+
+    <div class="modal hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal__box">
+        <h2 id="modalTitle">err idk</h2>
+        <p>You went out of range. I will now offer the sacred number.</p>
+        <div class="modal__actions">
+          <button id="showMe" class="calc__btn">show me</button>
+          <button id="closeModal" class="calc__btn calc__btn--ghost">nah</button>
+        </div>
+      </div>
+      <div class="modal__backdrop" aria-hidden="true"></div>
+    </div>
+  </main>
+
+  <script src="table_parts_bootstrap.js"></script>
+  <script src="add_table_part1.js"></script>
+  <script src="add_table_part2.js"></script>
+  <script src="add_table_part3.js"></script>
+  <script src="add_table_part4.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
