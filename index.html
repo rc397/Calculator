@@ -23,19 +23,40 @@
         <input id="expr" class="calc__input" inputmode="text" autocomplete="off" spellcheck="false" placeholder="e.g. 1+1" />
         <button id="btn" class="calc__btn">Calculate</button>
       </div>
-    </section>
 
-    <section class="crash hidden" id="crash">
-      <div class="crash__box">
-        <h2>Crash</h2>
-        <pre class="crash__msg" id="crashMsg"></pre>
-        <button id="reload" class="calc__btn">Reload (coward)</button>
-      </div>
+      <section class="calc__details" aria-label="Extra terrible settings">
+        <div class="calc__row">
+          <label class="calc__toggle">
+            <input type="checkbox" id="muteBroken41" /> Mute (broken)
+          </label>
+        </div>
+
+        <div class="calc__row">
+          <div class="calc__anger">
+            <div class="calc__angerLabel">Anger meter</div>
+            <div class="calc__angerBar" aria-hidden="true">
+              <div class="calc__angerFill" id="angerFill"></div>
+            </div>
+            <div class="calc__angerText" id="angerText">calm-ish</div>
+          </div>
+        </div>
+
+        <div class="calc__row">
+          <div class="calc__box">
+            <div class="calc__boxTitle">Achievements <span id="brotozoa"></span></div>
+            <ul class="calc__list" id="skibidi"></ul>
+          </div>
+          <div class="calc__box">
+            <div class="calc__boxTitle">History </div>
+            <ol class="calc__list" id="kirky"></ol>
+          </div>
+        </div>
+      </section>
     </section>
 
     <div class="modal hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal__box">
-        <h2 id="modalTitle">err idk</h2>
+        <h2 id="modalTitle">err idk vromordial soup</h2>
         <p>You went out of range. I will now offer the sacred number.</p>
         <div class="modal__actions">
           <button id="showMe" class="calc__btn">show me</button>
